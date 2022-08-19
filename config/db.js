@@ -3,8 +3,8 @@ import dotenv from 'dotenv'
 dotenv.config({ path: 'variables.env'});
 
 const config = {
-  host: process.env.BD_HOST,
-  port: process.env.BD_PORT,
+  host: 'bhkyvgakvrjdyxe4uvjx-mysql.services.clever-cloud.com',
+  port: '3306',
   dialect: 'mysql',
   define: {
     timestamps: false,
@@ -18,7 +18,7 @@ const config = {
   operatorAliases: false,
 };
 
-const db = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER, process.env.BD_PASS, config);
+const db = new Sequelize('bhkyvgakvrjdyxe4uvjx', 'u7wxzpzlecv5acgz', 'JNva6yMEHadtEMt5vQcE', config);
 
 export default db;
 
